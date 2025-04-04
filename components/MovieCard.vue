@@ -8,6 +8,7 @@ defineProps<{
 const imageUrl = (path: string) => {
   return `https://image.tmdb.org/t/p/w500${path}`;
 };
+const { movie: choosenMovie, chooseMovie } = useChoosenMovie();
 </script>
 <template>
   <div />
