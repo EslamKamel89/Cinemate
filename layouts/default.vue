@@ -14,7 +14,7 @@
           <img src="/images/logo.png" class="h-14" alt="Cinemate Logo" />
           <span
             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >Flowbite</span
+            >Cinemate</span
           >
         </NuxtLink>
         <button
