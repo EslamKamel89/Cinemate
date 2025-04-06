@@ -17,7 +17,7 @@ export interface Movie {
 export interface ApiResponse<T> {
   dates?: Dates;
   page: number;
-  results: array<T>;
+  results: T[];
   total_pages: number;
   total_results: number;
 }

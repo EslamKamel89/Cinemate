@@ -12,7 +12,7 @@ const { movie: choosenMovie, chooseMovie } = useChoosenMovie();
 </script>
 <template>
   <div
-    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+    class="max-w-sm bg-white border h-full border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
   >
     <NuxtLink
       :to="{
