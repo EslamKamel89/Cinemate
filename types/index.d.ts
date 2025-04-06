@@ -15,7 +15,7 @@ export interface Movie {
   vote_count: number;
 }
 export interface ApiResponse<T> {
-  dates: Dates;
+  dates?: Dates;
   page: number;
   results: array<T>;
   total_pages: number;
