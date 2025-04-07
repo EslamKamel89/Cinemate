@@ -90,7 +90,7 @@ onMounted(() => {
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-x-3 space-y-3 self-stretch h-full"
         >
           <div v-for="movie in series" :key="movie.id" class="">
-            <MovieCard :movie />
+            <SeriesCard :movie />
           </div>
         </div>
       </div>
