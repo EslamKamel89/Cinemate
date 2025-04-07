@@ -1,5 +1,5 @@
 <template>
-  <div class="min-w-80 md:min-w-96">
+  <div class="">
     <div
       role="status"
       class="max-w-sm p-4 border border-gray-200 rounded-sm shadow-sm animate-pulse md:p-6 dark:border-gray-700"

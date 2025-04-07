@@ -39,7 +39,7 @@ onMounted(() => {
       <div class="w-full flex items-center justify-center">
         <div v-if="status == 'pending'">
           <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-x-3 space-y-3 self-stretch h-full"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-x-5 space-y-3 h-full"
           >
             <div v-for="i in 20" :key="i">
               <LoadingCard />
