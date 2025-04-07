@@ -74,6 +74,15 @@
             </li>
             <li>
               <NuxtLink
+                to="/popular"
+                class="block !pb-2 pt-2 px-3 md:px-0 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                aria-current="page"
+                active-class="!px-3 border-b-1  border-white"
+                >Popular</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
                 to="/top-rated"
                 class="block !pb-2 pt-2 px-3 md:px-0 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
                 aria-current="page"

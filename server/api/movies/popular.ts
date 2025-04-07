@@ -17,5 +17,19 @@ export default defineEventHandler(async (e) => {
       },
     }
   );
-  return { movies };
+  const series = await $fetch<ApiResponse<Movie>>(
+    "https://api.themoviedb.org/3/tv/popular",
+    {
+      method: "get",
+      params: {
+        language: "en-US",
+        page: 1,
+      },
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        accept: "application/json",
+      },
+    }
+  );
+  return { movies, series };
 });
