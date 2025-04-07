@@ -142,9 +142,13 @@ const { status } = await useFetch("/api/movies/search", {
           />
         </svg>
         <span class="sr-only">Info</span>
-        <div>
-          <span class="font-medium">Sorry No Data Found!</span> Pleas try
-          changing the search and try again
+        <div v-if="search">
+          <span class="font-bold text-red-500">Sorry No Data Found!!</span>
+          Please try changing the search and try again
+        </div>
+        <div v-else>
+          <span class="font-bold text-blue-500">Start typing!!</span> to find
+          the movies you like
         </div>
       </div>
     </section>
