@@ -27,5 +27,5 @@ export default defineEventHandler(async (e) => {
       accept: "application/json",
     },
   });
-  return { movies };
+  return { movies, series };
 });
