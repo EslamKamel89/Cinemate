@@ -1,16 +1,26 @@
 <script setup lang="ts">
+import debounce from "lodash.debounce";
 import type { Movie } from "~/types";
-
 const search = useState<string>(() => "");
 const movies = useState<Movie[]>(() => []);
 const series = useState<Movie[]>(() => []);
-const { status } = await useFetch("/api/movies/search", {
-  params: { search },
+const searchFun = computed(() => search.value);
+const { status, execute, refresh } = await useFetch("/api/movies/search", {
+  params: { search: search },
+  key: search.value,
+  immediate: false,
+  watch: [],
   transform(data) {
     movies.value = data.movies.results;
     series.value = data.series.results;
   },
 });
+watch(
+  search,
+  debounce(() => {
+    refresh();
+  }, 500)
+);
 </script>
 <template>
   <div class="max-w-2xl mx-auto mt-5">
