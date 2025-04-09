@@ -8,7 +8,7 @@ const props = defineProps<{
 const imageUrl = (path: string) => {
   return `https://image.tmdb.org/t/p/w500${path}`;
 };
-const { movie: choosenMovie, chooseMovie } = useChoosenMovie();
+const { state: choosenMovieState, chooseMovie } = useChoosenMovie();
 </script>
 <template>
   <div
@@ -18,7 +18,7 @@ const { movie: choosenMovie, chooseMovie } = useChoosenMovie();
       :to="{
         path: `/item/${movie.title}`,
       }"
-      @click="chooseMovie(movie)"
+      @click="chooseMovie(movie, true)"
     >
       <img
         class="rounded-t-lg"
